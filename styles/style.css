@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template: "nav header" 100px
+                    "nav main"  1fr
+                    "footer footer" 100px/
+                    250px 1fr;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    grid-area: nav;
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+nav {
+    background-color: black;
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: 50px 1fr 200px;
+}
+
+nav .logo img {
+    width: 200px;
+}
+
+nav .side-nav {
+    color: whitesmoke;
+    margin-top: 2rem;
+    padding-left: 1rem;
+    align-self: start;
+}
+
+nav .side-nav ul li {
+    list-style: none;
+    padding-bottom: 0.5rem;
+}
+
+nav .side-nav ul li a {
+    color: darkgray;
+    text-decoration: none;
+}
+
+nav .side-nav ul li a.menu-item {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    align-items: center;
+}
+
+nav .side-nav ul li a.title {
+    color: white;
+}
+
+nav .side-nav ul.playlist {
+    margin-top: 2rem;
+}
+
+nav .side-nav ul li a.playlist {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+nav .side-nav ul li a.menu-item .svg-wrapper {
+    background-color: grey;
+    width: 25px;
+    height: 25px;
+    display: grid;
+    place-items: center;
+}
+
+nav .side-nav ul li img.icon {
+    width: 25px;
+}
+
+nav .profile {
+    align-self: end;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    margin-bottom: 1rem;
+}
+
+nav .profile h2 {
+    color: whitesmoke;
+}
+
+nav .profile svg {
+    width: 30px;
+    height: 30px;
+    background-color: grey;
+    border-radius: 50%;
+}
+
+main {
+    background-color: rgb(83, 83, 83);
+}
+
+header {
+    background-color: rgb(83, 83, 83);
+    display: grid;
+    height: 100px;
+    padding: 1rem;
+    justify-content: right;
+    align-items: center;
+}
+
+header button {
+    width: 150px;
+    height: 50px;
+    background-color: black;
+    border: solid 2px white;
+    color: white;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+footer {
+    background-color: grey;
+    height: 100px;
+    width: 100vw;
+}
