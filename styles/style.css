@@ -146,12 +146,12 @@ main {
 }
 
 header {
-    background-color: rgb(83, 83, 83);
     display: grid;
-    height: 100px;
+    height: 75px;
     padding: 1rem;
     justify-content: right;
     align-items: center;
+
 }
 
 header button {
@@ -165,13 +165,21 @@ header button {
     font-weight: bold;
 }
 
+main, header {
+    background-image: linear-gradient(rgba(0,0,0,.6),#121212);
+}
+
+main {
+    overflow: scroll;
+}
+
 main .top-nav {
     text-align: center;
+    margin: 1rem;
 }
 
 main .top-nav ul li {
     list-style: none;
-    color: lightgrey;
     display: inline;
     margin-left: 1rem;
 }
@@ -179,16 +187,196 @@ main .top-nav ul li {
 main .top-nav ul a {
     text-decoration: none;
     text-transform: uppercase;
+    color: lightgrey;
+    display: inline-grid;
+    justify-items: center;
+}
+
+main .top-nav ul a .underline {
+    display: inline-block;
+    transition: 0.3s;
+    width: 0;
+}
+
+main .top-nav ul a:active .underline {
+    background-color: green;
+    height: 2px;
+    width: 50px;
+}
+
+main .top-nav ul a span {
+    display: inline-block;
+}
+
+main .albums {
+    display: grid;
+    grid-auto-rows: fit-content;
+}
+
+main .albums h2 {
+    margin: 1rem;
+    color: whitesmoke;
+    display: block;
+}
+
+main .albums .list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 160px);
+    margin-left: 1rem;
+}
+
+main .albums .popular img {
+    border-radius: 50%;
+}
+
+main .albums .list img {
+    width: 150px;
+    justify-self: center;
+}
+
+main .albums p {
+    margin: 1rem;
+    color: rgb(179, 179, 179);;
+    font-size: 0.75rem;
+}
+
+main .albums .list p {
+    text-align: center;
+}
+
+main .albums .list p.title {
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin: 0.75rem;
+}
+
+main .albums .list p.subtitle {
+    color: rgb(179, 179, 179);
+    font-size: 0.75rem;
 }
 
 
-main .top-nav ul a:active {
-    border-bottom: green solid 2px;
-    padding-bottom: 0.5rem;
-}
 
 footer {
-    background-color: grey;
+    background-color: #181818;
     height: 100px;
     width: 100vw;
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
 }
+
+footer .left {
+    display: grid;
+    grid-template-columns: repeat(3, 5rem);
+    place-items: center;
+}
+
+footer .left img {
+    width: 75px;
+    padding: 0.5rem;
+}
+
+footer .left .song-info {
+    justify-content: start;
+}
+
+footer .left p {
+    color: whitesmoke;
+}
+
+footer .left p.title {
+    font-size: 1rem;
+}
+
+footer .left p.artist {
+    font-size: 0.75rem;
+    color: rgb(179, 179, 179);
+}
+
+footer .left .svgs svg {
+    display: inline-block;
+    fill: white;
+    margin-right: 1rem;
+}
+
+footer .middle {
+    display: grid;
+    grid-template-rows: auto auto;
+    place-items: center;
+}
+
+footer .middle .middle-top {
+    display: grid;
+    grid-template-columns: repeat(5, 3rem);
+    margin-top: 1rem;
+    place-items: center;
+}
+
+footer .middle .middle-top svg.player-icon {
+    display: inline;
+    fill: whitesmoke;
+}
+
+footer .middle .middle-top .play-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    align-self: center;
+    display: grid;
+    place-items: center;
+}
+
+footer .middle .middle-top svg.play {
+    fill: black;
+    border-radius: 50%;
+
+}
+
+footer .middle .middle-bottom {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 1rem;
+    color: rgb(179, 179, 179);
+    font-size: 0.75rem;
+    align-self: start;
+    place-items: center;
+}
+
+footer .middle .middle-bottom .progress-bar {
+    width: 350px;
+    height: 5px;
+    background-color: rgb(179, 179, 179);
+    margin: 0 0.5rem;
+    border-radius: 2px;
+}
+
+footer .middle .middle-bottom .progress {
+    width: 50%;
+    background-color: whitesmoke;
+    height: 5px;
+    border-radius: 2px;
+}
+
+footer .right {
+    display: grid;
+    grid-template-columns: repeat(3, 30px) 100px;
+    place-items: center;
+}
+
+footer .right svg {
+    width: 20px;
+    fill: whitesmoke;
+}
+
+footer .right svg.tv {
+    width: 15px;
+}
+
+footer .right .volume {
+    width: 100px;
+    height: 5px;
+
+}
+
